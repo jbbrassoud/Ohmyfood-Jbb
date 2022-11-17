@@ -4,6 +4,9 @@ body{
     justify-content: space-between;
     font-family: 'Roboto', sans-serif;
     color: black;
+    width: 100%;
+    margin-block-start: 0;
+    margin-inline-start: 0;
 }
 ::-webkit-scrollbar{
     display: none;
@@ -30,11 +33,12 @@ header{
     width: 100%;
     background-color: white;
     top: -8px;
+    overflow: hidden;
 }
 .afterheader{padding-top: 90px;}
 
-header h1{
-    font-family: 'Shrikhand', cursive;
+header img{
+    height:30px;
     margin:auto;
 }
 
@@ -43,10 +47,41 @@ ul{
 }
 
 img{
-    height:200px; */ a corriger
+    height:400px;
+    width: auto;
+    object-fit: cover;
+    overflow: hidden;
 }
 
 a{
     text-decoration: none;
     color: black;
+}
+
+.menu{
+    margin: -15px 0 0 0;
+    border-radius: 15px;
+    background-color: rgb(247,247,247);
+}
+
+article{
+    width: 100%;
+    justify-content: space-between;
+}
+article a{
+    width:30%;
+    height: 100%;
+    background-color: #99E2D0;
+}
+
+.fa-circle-check{
+    display: none;
+    color: white;
+    width:100%;
+    margin: auto;
+    align-self: center;
+}
+
+article:hover :last-child{
+    display: flex;
 }
