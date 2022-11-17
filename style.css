@@ -1,0 +1,52 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
+.center{
+    align-items: center;
+}
+
+header{
+    height: 80px;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    top: -8px;
+}
+.afterheader{padding-top: 90px;}
+
+header h1{
+    font-family: 'Shrikhand', cursive;
+    margin:auto;
+}
+
+ul{
+    list-style:decimal;
+}
+
+img{
+    height:200px; */ a corriger
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
