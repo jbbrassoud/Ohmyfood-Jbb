@@ -33,17 +33,20 @@ h3{
 p{ 
     margin-block: 0;
     overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 header{
-    height: 80px;
+    height: 50px;
     position: fixed;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    padding:5%;
+    width: 90%;
     background-color: white;
     top: -8px;
     overflow: hidden;
+    font-size: 20px;
 }
 .afterheader{padding-top: 90px;}
 
@@ -75,17 +78,18 @@ a{
     background-color: rgb(247,247,247);
 }
 
-article{
-    width: 90%;
+.menu article{
+    width: 95%;
     justify-content: space-between;
     height: 60px;
     background-color: white;
     margin: auto;
     border-radius: 20px;
-    overflow-wrap: normal;
-    overflow: hidden;
 }
-
+article span{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 article:hover :last-child{
     display: flex;
 }
@@ -93,15 +97,14 @@ article:hover :last-child{
 article a{
     display: none;
     width:20%;
-    height: 100%;
     background-color: #99E2D0;
     justify-content: center;
     align-items: center;
+    border-radius: 0 20px 20px 0;
 }
 
 .fa-circle-check{
     color: white;
-    width:50px;
-    margin:auto;
+    font-size: 20px;
 }
 
