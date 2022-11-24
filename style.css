@@ -4,7 +4,7 @@ body{
     flex-direction: column;
     justify-content: space-between;
     font-family: 'Roboto', sans-serif;
-
+    background-color: white;
     margin-block: 0;
     margin-inline: 0;
 }
@@ -84,7 +84,7 @@ header{
 }
 
 header img{
-    height:30px;
+    height:25px;
     margin:auto;
 }
 
@@ -101,7 +101,7 @@ header img{
     margin:20px;
     padding:15px;
     border-radius:30px;
-    background: linear-gradient(125deg,rgb(222, 107, 239) 20px, rgb(148,102,212));
+    background: linear-gradient(175deg,rgb(202, 129, 212) 20px, rgb(148,102,212));
 }
 
 .descro p{
@@ -115,41 +115,82 @@ header img{
     padding:25px;
 }
 
-ol{
-    display: flex;
-    flex-direction: column;
+.ol{
     justify-content: space-between;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    padding-inline-start:0;
+    padding-left: 10px;
 }
 
-li{
+.ol a{
+    display: flex;
+    align-items: center;
+    background-color: rgb(247,247,247);
     list-style-position: outside;
     font-size: 18px;
     padding:20px;
     border-radius: 20px;
-    background-color: rgb(247,247,247);
     margin:10px 0 10px 0;
     box-shadow: 0 2px 15px rgb(0,0,0,0.2);
 }
 
-li i{
+.ol a span{
+    position: absolute;
+    left: 20px;
+    background-color: rgb(136,95,211);
+    color: white;
+    font-size: 14px;
+    padding: 5px 9px;
+    border-radius: 25px;
+}
+
+.ol a:hover{
+    background-color: rgb(243,238,253);
+    
+}
+
+.ol a:hover :last-child{
+    color:rgb(136,95,211);
+}
+.ol a i{
+    font-size: 20px;
     width:30px;
+    margin:0 10px 0 10px;
     text-align: center;
     
 }
 
-img{
-    height:400px;
+
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.rest-list{
+    justify-content: space-around;
+
+}
+.rest-list a{
+
+}
+.rest-list article{
+    overflow: hidden;
+}
+.rest-list img{
+    height:200px;
     width: auto;
     object-fit: cover;
     overflow: hidden;
 }
 
-a{
-    text-decoration: none;
-    color: black;
+.rest-list span{
+    position: relative;
+    left:300px;
+    top:-180px;
+    padding:5px 10px;
+    z-index:5;
+    background-color: rgb(153,226,208);
+    border-radius: 5px;
+    color: rgb(7,135,102);
 }
 
 .menu{
