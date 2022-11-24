@@ -1,13 +1,14 @@
 body{
+    width:100vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     font-family: 'Roboto', sans-serif;
-    color: black;
-    width: 100%;
+
     margin-block: 0;
     margin-inline: 0;
 }
+
 ::-webkit-scrollbar{
     display: none;
 }
@@ -25,38 +26,118 @@ body{
     align-items: center;
 }
 
-h3{
+h1{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+h2{
     margin-block: 0;
     overflow: hidden;
 
 }
 p{ 
+    font-size:15px;
     margin-block: 0;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
+.grey{
+    color: rgb(126, 126, 126);
+}
+
+.dark-grey{
+    color: rgb(61, 61, 61);
+}
+
 header{
+    width:100vw;
     height: 50px;
     position: fixed;
     justify-content: center;
     align-items: center;
-    padding:5%;
-    width: 90%;
+    padding:10px 0 5px 0;
+
     background-color: white;
-    top: -8px;
     overflow: hidden;
     font-size: 20px;
 }
-.afterheader{padding-top: 90px;}
+.afterheader{
+    padding-top: 80px;
+}
+
+.shadow{
+    box-shadow: 0 2px 15px rgb(0,0,0,0.2);
+}
+
+.place{
+    width:100vw;
+    justify-content: center;
+    padding-bottom: 15px;
+    background-color:rgb(234,234,234)
+
+}
+
+.place i{
+    margin-right: 15px;;
+}
 
 header img{
     height:30px;
     margin:auto;
 }
 
-ul{
-    list-style:decimal;
+.descro{
+    padding: 20px;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(247,247,247);
+}
+
+.descro a{
+    color:white;
+    margin:20px;
+    padding:15px;
+    border-radius:30px;
+    background: linear-gradient(125deg,rgb(222, 107, 239) 20px, rgb(148,102,212));
+}
+
+.descro p{
+    font-size: 18px;
+    font-weight: 300;
+    color: rgb(61, 61, 61);
+}
+
+.fontionnement{
+    justify-content: space-around;
+    padding:25px;
+}
+
+ol{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start:0;
+}
+
+li{
+    list-style-position: outside;
+    font-size: 18px;
+    padding:20px;
+    border-radius: 20px;
+    background-color: rgb(247,247,247);
+    margin:10px 0 10px 0;
+    box-shadow: 0 2px 15px rgb(0,0,0,0.2);
+}
+
+li i{
+    width:30px;
+    text-align: center;
+    
 }
 
 img{
@@ -85,13 +166,16 @@ a{
     background-color: white;
     margin: auto;
     border-radius: 20px;
+    transition-duration: 0.5s;
 }
 article span{
     overflow: hidden;
     text-overflow: ellipsis;
+    transition-duration: 0.5s;
 }
 article:hover :last-child{
     display: flex;
+    transition-duration: 0.5s;
 }
 
 article a{
@@ -101,10 +185,12 @@ article a{
     justify-content: center;
     align-items: center;
     border-radius: 0 20px 20px 0;
+    transition-duration: 0.5s;
 }
 
 .fa-circle-check{
     color: white;
     font-size: 20px;
+    transition-duration: 0.5s;
 }
 
