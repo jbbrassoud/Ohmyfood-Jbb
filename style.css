@@ -58,7 +58,7 @@ header{
     justify-content: center;
     align-items: center;
     padding:10px 0 5px 0;
-
+    z-index:5;
     background-color: white;
     overflow: hidden;
     font-size: 20px;
@@ -167,27 +167,32 @@ a{
 
 .rest-list{
     justify-content: space-around;
-
+    padding:25px;
+    background-color: rgb(245,245,245);
 }
 .rest-list a{
-
+    border-radius: 25px;
+    background-color: white;
+    margin:10px 0;
 }
 .rest-list article{
     overflow: hidden;
+    object-fit:cover;
+
 }
 .rest-list img{
-    height:200px;
-    width: auto;
-    object-fit: cover;
+    height:auto;
+    width: 100%;
+    object-fit:cover;
     overflow: hidden;
 }
 
 .rest-list span{
-    position: relative;
-    left:300px;
-    top:-180px;
+    position: sticky;
+    left:80%;
+    top:20px;
     padding:5px 10px;
-    z-index:5;
+    z-index:1;
     background-color: rgb(153,226,208);
     border-radius: 5px;
     color: rgb(7,135,102);
