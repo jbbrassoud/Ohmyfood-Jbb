@@ -178,6 +178,7 @@ a{
 .rest-list article{
     overflow: hidden;
     object-fit:cover;
+    border-radius: 20px;
 
 }
 .rest-list img{
@@ -214,17 +215,17 @@ a{
     border-radius: 20px;
     transition-duration: 0.5s;
 }
-article span{
+.menu article span{
     overflow: hidden;
     text-overflow: ellipsis;
     transition-duration: 0.5s;
 }
-article:hover :last-child{
+.menu article:hover :last-child{
     display: flex;
     transition-duration: 0.5s;
 }
 
-article a{
+.menu article a{
     display: none;
     width:20%;
     background-color: #99E2D0;
