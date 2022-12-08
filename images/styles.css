@@ -1,0 +1,346 @@
+body {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "Roboto", sans-serif;
+  background-color: white;
+  margin-block: 0;
+  margin-inline: 0;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.center {
+  align-items: center;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+h3 {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+  font-weight: 500;
+}
+
+h4 {
+  font-family: "shrikhand";
+  font-size: 20px;
+}
+
+p {
+  font-size: 15px;
+  margin-block: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.grey {
+  color: rgb(126, 126, 126);
+}
+
+.dark-grey {
+  color: rgb(61, 61, 61);
+}
+
+header {
+  width: 100vw;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0 5px 0;
+  z-index: 5;
+  background-color: white;
+  overflow: hidden;
+  font-size: 20px;
+  padding: 1em;
+}
+
+.afterheader {
+  padding-top: 80px;
+}
+
+.shadow {
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+.place {
+  width: 100vw;
+  justify-content: center;
+  padding-bottom: 15px;
+  background-color: rgb(234, 234, 234);
+}
+
+.place i {
+  margin-right: 15px;
+}
+
+header img {
+  height: 25px;
+  margin: auto;
+}
+
+.descro {
+  padding: 20px;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(247, 247, 247);
+}
+
+.descro a {
+  color: white;
+  margin: 20px;
+  padding: 15px;
+  border-radius: 30px;
+  background: linear-gradient(175deg, rgb(202, 129, 212) 20px, rgb(148, 102, 212));
+}
+
+.descro p {
+  font-size: 18px;
+  font-weight: 300;
+  color: rgb(61, 61, 61);
+}
+
+.fontionnement {
+  justify-content: space-around;
+  padding: 25px;
+}
+
+.ol {
+  justify-content: space-between;
+  padding-left: 10px;
+}
+
+.ol a {
+  display: flex;
+  align-items: center;
+  background-color: rgb(247, 247, 247);
+  list-style-position: outside;
+  font-size: 18px;
+  padding: 20px;
+  border-radius: 20px;
+  margin: 10px 0 10px 0;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+  transition-duration: 1s;
+}
+
+.ol a span {
+  position: absolute;
+  left: 20px;
+  background-color: rgb(136, 95, 211);
+  color: white;
+  font-size: 14px;
+  padding: 5px 9px;
+  border-radius: 25px;
+}
+
+.ol a i {
+  font-size: 20px;
+  width: 30px;
+  margin: 0 10px 0 10px;
+  text-align: center;
+}
+
+.ol a:last-child {
+  background-color: rgb(245, 237, 255);
+}
+
+.ol a:last-child i {
+  color: rgb(136, 95, 211);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.rest-list {
+  justify-content: space-around;
+  padding: 25px;
+  background-color: rgb(245, 245, 245);
+}
+
+.rest-list a {
+  border-radius: 15px;
+  background-color: white;
+  margin: 10px 0;
+}
+
+.card {
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+}
+
+.card img {
+  height: 40vw;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+}
+
+.card-top {
+  height: 50%;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-color: white;
+}
+
+.card-top span {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 80%;
+  top: 20px;
+  padding: 5px 10px;
+  z-index: 1;
+  background-color: rgb(153, 226, 208);
+  border-radius: 5px;
+  color: rgb(7, 135, 102);
+}
+
+.card-low {
+  padding: 15px 10px;
+  justify-content: space-between;
+}
+
+.fa-heart {
+  font-size: 2em;
+  color: blueviolet;
+  transition-duration: 1s;
+}
+.fa-heart:hover {
+  display: none;
+}
+
+.beforemenu {
+  min-height: 120px;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.beforemenu img {
+  width: 100%;
+  z-index: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+}
+
+.menu {
+  margin: -30px 0 0 0;
+  padding: 8% 2% 5% 2%;
+  border-radius: 30px;
+  background-color: rgb(247, 247, 247);
+  transition-duration: 0.5s;
+}
+.menu h1 {
+  font-size: 1.5em;
+  font-family: "Shrikhand", cursive;
+  font-weight: 300;
+  margin-right: 1.5em;
+}
+.menu h2 {
+  font-size: 20px;
+  font-weight: 100;
+  text-transform: uppercase;
+  width: 50px;
+  padding-bottom: 5px;
+  border-bottom: #99E2D0 solid 3px;
+}
+
+.menu-card {
+  width: 100%;
+  justify-content: space-between;
+  background-color: white;
+  margin: 2vw 0;
+  border-radius: 20px;
+  text-overflow: ellipsis;
+  opacity: 1;
+  transition-duration: 1.5s;
+  transition-delay: 1s;
+}
+.menu-card p {
+  font-weight: 300;
+}
+
+.menu-card-info {
+  justify-content: space-around;
+  opacity: inherit;
+  transition-duration: 1.5s;
+  padding: 0.7em;
+  transition: 0.5s;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.menu-card-price {
+  padding: 3vw 5vw;
+  transition-duration: 0.5s;
+  font-weight: 500;
+  justify-content: end;
+}
+
+.menu-card-check {
+  display: none;
+  width: 20%;
+  background-color: #99E2D0;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 20px 20px 0;
+  transition: 0.5s;
+}
+
+.menu-card:hover .menu-card-check {
+  display: flex;
+  transition-duration: 0.5s;
+}
+
+.command a {
+  color: white;
+  margin: 30px auto;
+  padding: 15px 25px;
+  border-radius: 30px;
+  background: linear-gradient(175deg, rgb(202, 129, 212) 20px, rgb(148, 102, 212));
+  transition-duration: 0.5s;
+}
+.command a:hover {
+  padding: 20px 30px;
+}
+
+.fa-circle-check {
+  color: white;
+  font-size: 20px;
+  transition-duration: 0.5s;
+}
+
+footer {
+  padding: 15px;
+  color: white;
+  background-color: rgb(53, 53, 53);
+}
+
+footer i {
+  width: 25px;
+}/*# sourceMappingURL=styles.css.map */

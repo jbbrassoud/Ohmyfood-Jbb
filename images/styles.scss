@@ -26,13 +26,9 @@ body{
     align-items: center;
 }
 
-$font-primary{
-    color:rgb(61, 61, 61);
-}
+$font-primary:rgb(61, 61, 61);
 
-$font-second{
-    color:rgb(126, 126, 126);
-}
+$font-second:rgb(126, 126, 126);
 
 h1{
     font-size: 24px;
@@ -226,21 +222,23 @@ a{
 .fa-heart{
     font-size: 2em;
     color:blueviolet;
+    transition-duration: 1s;
+    &:hover{
+        display:none;
+    }
 }
-.fa-heart:hover{
-    display:none;
-}
+
 
 .beforemenu{
     min-height: 120px;
     overflow: hidden;
     object-fit: cover;
-}
-.beforemenu img{
-    width: 100%;
-    z-index:0;
-    object-fit: cover;
-    overflow: hidden;
+    img{
+        width: 100%;
+        z-index:0;
+        object-fit: cover;
+        overflow: hidden;
+    }
 }
 
 .menu{
@@ -249,23 +247,22 @@ a{
     border-radius: 30px;
     background-color: rgb(247,247,247);
     transition-duration: 0.5s;
+    h1{
+        font-size: 1.5em;
+        font-family:'Shrikhand', cursive ;
+        font-weight: 300;
+        margin-right: 1.5em;
+    }
+    h2{
+        font-size: 20px;
+        font-weight: 100;
+        text-transform: uppercase;
+        width:50px;
+        padding-bottom: 5px;
+        border-bottom: #99E2D0 solid 3px;
+    }
 }
 
-.menu h1{
-    font-size: 1.5em;
-    font-family:'Shrikhand', cursive ;
-    font-weight: 300;
-    margin-right: 1.5em;
-}
-
-.menu h2{
-    font-size: 20px;
-    font-weight: 100;
-    text-transform: uppercase;
-    width:50px;
-    padding-bottom: 5px;
-    border-bottom: #99E2D0 solid 3px;
-}
 
 .menu-card{
     width: 100%;
@@ -277,11 +274,15 @@ a{
     opacity: 1;
     transition-duration: 1.5s;
     transition-delay: 1s;
+    p{
+        font-weight: 300;
+    }
 }
 
 .menu-card-info{
     justify-content: space-around;
-    
+    opacity: inherit;
+    transition-duration: 1.5s;
     padding: 0.7em;
     transition: 0.5s;
     overflow: hidden;
@@ -296,9 +297,6 @@ a{
     justify-content: end;
 }
 
-.menu-card p{
-    font-weight: 300;
-}
 
 
 .menu-card-check{
@@ -315,6 +313,18 @@ a{
 .menu-card:hover .menu-card-check{
     display: flex;
     transition-duration: 0.5s;
+}
+
+.command a{
+    color:white;
+    margin:30px auto;
+    padding:15px 25px;
+    border-radius:30px;
+    background: linear-gradient(175deg,rgb(202, 129, 212) 20px, rgb(148,102,212));
+    transition-duration: 0.5s;
+    &:hover{
+        padding: 20px 30px;
+    }
 }
 
 .fa-circle-check{

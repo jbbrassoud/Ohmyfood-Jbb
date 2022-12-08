@@ -26,9 +26,13 @@ body{
     align-items: center;
 }
 
-$font-primary:rgb(61, 61, 61);
+$font-primary{
+    color:rgb(61, 61, 61);
+}
 
-$font-second:rgb(126, 126, 126);
+$font-second{
+    color:rgb(126, 126, 126);
+}
 
 h1{
     font-size: 24px;
@@ -60,12 +64,6 @@ p{
     color:$font-primary;
 }
 
-@mixin buttons{
-    box-shadow: 0 2px 15px rgb(0,0,0,0.2);
-    background: linear-gradient(175deg,rgb(202, 129, 212) 20px, rgb(148,102,212));
-}
-
-
 header{
     width:100vw;
     position: fixed;
@@ -91,11 +89,12 @@ header{
     justify-content: center;
     padding-bottom: 15px;
     background-color:rgb(234,234,234)
-    i{
-        margin-right: 15px;;
-    }
+
 }
 
+.place i{
+    margin-right: 15px;;
+}
 
 header img{
     height:25px;
@@ -132,7 +131,9 @@ header img{
 .ol{
     justify-content: space-between;
     padding-left: 10px;
-    a{
+}
+
+.ol a{
         display: flex;
         align-items: center;
         background-color: rgb(247,247,247);
@@ -141,33 +142,34 @@ header img{
         padding:20px;
         border-radius: 20px;
         margin:10px 0 10px 0;
+        box-shadow: 0 2px 15px rgb(0,0,0,0.2);
         transition-duration: 1s;
-        span{
-            position: absolute;
-            left: 20px;
-            background-color: rgb(136,95,211);
-            color: white;
-            font-size: 14px;
-            padding: 5px 9px;
-            border-radius: 25px;
-        }
-        
-        
-        i{
-            font-size: 20px;
-            width:30px;
-            margin:0 10px 0 10px;
-            text-align: center;
-        }
-        &:last-child{
-            background-color: rgb(245,237,255);
-            i{
-                color: rgb(136,95,211);
-            }
-        }
-        
+}
 
-    }
+.ol a span{
+    position: absolute;
+    left: 20px;
+    background-color: rgb(136,95,211);
+    color: white;
+    font-size: 14px;
+    padding: 5px 9px;
+    border-radius: 25px;
+}
+
+
+.ol a i{
+    font-size: 20px;
+    width:30px;
+    margin:0 10px 0 10px;
+    text-align: center;
+}
+
+.ol a:last-child{
+    background-color: rgb(245,237,255);
+}
+
+.ol a:last-child i{
+    color: rgb(136,95,211);
 }
 
 
@@ -180,81 +182,65 @@ a{
     justify-content: space-around;
     padding:25px;
     background-color: rgb(245,245,245);
-    a{
-        border-radius: 15px;
-        background-color: white;
-    }
 }
-
-.card{
+.rest-list a{
+    border-radius: 15px;
     background-color: white;
+    margin:10px 0;
+}
+.card{
+
     overflow: hidden;
     object-fit:cover;
     border-radius: 20px;
-    transition-duration: 0.5s;
-    img{
-        height: 40vw;
-        width: 100%;
-        object-fit:cover;
-        overflow: hidden;
-    }
-}
 
+}
+.card img{
+    height: 40vw;
+    width: 100%;
+    object-fit:cover;
+    overflow: hidden;
+}
 .card-top{
     height: 50%;
     overflow: hidden;
     object-fit: cover;
     background-color: white;
-    span{
-        position:sticky;
-        left:80%;
-        top:-200px;
-        padding:5px 10px;
-        z-index:1;
-        background-color: rgb(153,226,208);
-        border-radius: 5px;
-        color: rgb(7,135,102);
-    }
 }
 
+.card-top span{
+    position: sticky;
+    left:80%;
+    top:20px;
+    padding:5px 10px;
+    z-index:1;
+    background-color: rgb(153,226,208);
+    border-radius: 5px;
+    color: rgb(7,135,102);
+}
 .card-low{
     padding: 15px 10px;
     justify-content: space-between;
 }
 
-.heart-filled{
-    display: none;
-
+.fa-heart{
+    font-size: 2em;
+    color:blueviolet;
 }
-
-.heart-empty{
-    display:flex;
-    font-size: 1.5em;
-    transition-duration: 1s;
-    color: black;
-    &:hover{
-        display:none;
-        .heart-filled{
-            display: flex;
-            font-size: 2em;
-            background:linear-gradient(175deg,rgb(202, 129, 212) 20px, rgb(148,102,212));
-        }
-    }
+.fa-heart:hover{
+    display:none;
 }
-
-
-
 
 .beforemenu{
     min-height: 120px;
     overflow: hidden;
     object-fit: cover;
-    img{
-        width: 100%;
-        z-index:0;
-        object-fit: cover;
-        overflow: hidden;
-    }
+}
+.beforemenu img{
+    width: 100%;
+    z-index:0;
+    object-fit: cover;
+    overflow: hidden;
 }
 
 .menu{
@@ -263,22 +249,23 @@ a{
     border-radius: 30px;
     background-color: rgb(247,247,247);
     transition-duration: 0.5s;
-    h1{
-        font-size: 1.5em;
-        font-family:'Shrikhand', cursive ;
-        font-weight: 300;
-        margin-right: 1.5em;
-    }
-    h2{
-        font-size: 20px;
-        font-weight: 100;
-        text-transform: uppercase;
-        width:50px;
-        padding-bottom: 5px;
-        border-bottom: #99E2D0 solid 3px;
-    }
 }
 
+.menu h1{
+    font-size: 1.5em;
+    font-family:'Shrikhand', cursive ;
+    font-weight: 300;
+    margin-right: 1.5em;
+}
+
+.menu h2{
+    font-size: 20px;
+    font-weight: 100;
+    text-transform: uppercase;
+    width:50px;
+    padding-bottom: 5px;
+    border-bottom: #99E2D0 solid 3px;
+}
 
 .menu-card{
     width: 100%;
@@ -290,9 +277,6 @@ a{
     opacity: 1;
     transition-duration: 1.5s;
     transition-delay: 1s;
-    p{
-        font-weight: 300;
-    }
 }
 
 .menu-card-info{
@@ -313,38 +297,25 @@ a{
     justify-content: end;
 }
 
+.menu-card p{
+    font-weight: 300;
+}
 
 
 .menu-card-check{
-    display: flex;
-    width:0;
+    display: none;
+    width:20%;
     background-color: #99E2D0;
     justify-content: center;
     align-items: center;
     border-radius: 0 20px 20px 0;
     transition: 0.5s;
-    transform: scaleX(0);
-    transform: rotateY('-90');
 
 }
 
 .menu-card:hover .menu-card-check{
-    width: 50px;
-    transform:rotateY('90');
-    transform: scaleX(1);
+    display: flex;
     transition-duration: 0.5s;
-}
-
-.command a{
-    color:white;
-    margin:30px auto;
-    padding:15px 25px;
-    border-radius:30px;
-    background: linear-gradient(175deg,rgb(202, 129, 212) 20px, rgb(148,102,212));
-    transition-duration: 0.5s;
-    &:hover{
-        padding: 20px 30px;
-    }
 }
 
 .fa-circle-check{
