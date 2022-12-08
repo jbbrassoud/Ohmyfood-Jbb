@@ -205,16 +205,17 @@ a{
     overflow: hidden;
     object-fit: cover;
     background-color: white;
-    span{
-        position:sticky;
-        left:80%;
-        top:-200px;
-        padding:5px 10px;
-        z-index:1;
-        background-color: rgb(153,226,208);
-        border-radius: 5px;
-        color: rgb(7,135,102);
-    }
+}
+
+.new-tag{
+    position:sticky;
+    left:80%;
+    top:-1000px;
+    padding:5px 10px;
+    z-index:1;
+    background-color: rgb(153,226,208);
+    border-radius: 5px;
+    color: rgb(7,135,102);
 }
 
 .card-low{
@@ -234,10 +235,12 @@ a{
     color: black;
     &:hover{
         display:none;
-        .heart-filled{
+        + .heart-filled{
             display: flex;
-            font-size: 2em;
+            font-size: 1.5em;
             background:linear-gradient(175deg,rgb(202, 129, 212) 20px, rgb(148,102,212));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     }
 }
@@ -325,7 +328,6 @@ a{
     transition: 0.5s;
     transform: scaleX(0);
     transform: rotateY('-90');
-
 }
 
 .menu-card:hover .menu-card-check{

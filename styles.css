@@ -197,11 +197,12 @@ a {
      object-fit: cover;
   background-color: white;
 }
-.card-top span {
+
+.new-tag {
   position: -webkit-sticky;
   position: sticky;
   left: 80%;
-  top: -200px;
+  top: -1000px;
   padding: 5px 10px;
   z-index: 1;
   background-color: rgb(153, 226, 208);
@@ -227,10 +228,12 @@ a {
 .heart-empty:hover {
   display: none;
 }
-.heart-empty:hover .heart-filled {
+.heart-empty:hover + .heart-filled {
   display: flex;
-  font-size: 2em;
+  font-size: 1.5em;
   background: linear-gradient(175deg, rgb(202, 129, 212) 20px, rgb(148, 102, 212));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .beforemenu {
