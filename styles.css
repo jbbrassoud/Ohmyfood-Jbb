@@ -199,12 +199,13 @@ a {
 }
 
 .new-tag {
-  position: -webkit-sticky;
-  position: sticky;
-  left: 80%;
-  top: -1000px;
+  position: relative;
+  right: -60vw;
+  top: -55vw;
   padding: 5px 10px;
   z-index: 1;
+  width: 5em;
+  text-align: center;
   background-color: rgb(153, 226, 208);
   border-radius: 5px;
   color: rgb(7, 135, 102);
