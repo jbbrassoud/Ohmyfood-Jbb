@@ -187,11 +187,13 @@ a{
 }
 
 .card{
+    position: relative;
     background-color: white;
     overflow: hidden;
     object-fit:cover;
     border-radius: 20px;
     transition-duration: 0.5s;
+    margin:20px 0;
     img{
         height: 40vw;
         width: 100%;
@@ -206,13 +208,15 @@ a{
     object-fit: cover;
     background-color: white;
 }
-
+.card-infos{
+    width:100%;
+}
 .new-tag{
-    position:relative;
-    right:-60vw;
-    top:-55vw;
+    position:absolute;
+    right:5vw;
+    top:5vw;
     padding:5px 10px;
-    z-index:1;
+    z-index:2;
     width: 5em;
     text-align: center;
     background-color: rgb(153,226,208);
@@ -224,28 +228,53 @@ a{
     padding: 15px 10px;
     justify-content: space-between;
 }
-
-.heart-filled{
-    display: none;
-
-}
-
-.heart-empty{
+.heart{
+    display: block;
+    position: relative;
+    z-index:1;
+    padding: 0.5em 1em;
+    .heart-filled{
+        transform: scale(0);
+        background:linear-gradient(175deg,rgb(202, 129, 212) 20px, rgb(148,102,212));
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition-duration: 1s;
+        font-size: 1.5em;
+        z-index:1;
+        transform-origin: bottom;
+    }
+    .heart-empty{
     display:flex;
-    font-size: 1.5em;
+    z-index:2;
     transition-duration: 1s;
     color: black;
+    opacity:1;
+    transform-origin: bottom;
+    transition-delay: 0.5s;
+    }
     &:hover{
-        display:none;
-        + .heart-filled{
-            display: flex;
-            font-size: 1.5em;
-            background:linear-gradient(175deg,rgb(202, 129, 212) 20px, rgb(148,102,212));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .heart-filled{
+            opacity:1;
+            transform:scale(1);            
+        }
+        .heart-empty{
+            opacity:0;
         }
     }
 }
+
+.fa-heart{
+    position: absolute;
+    margin:0px;
+    top: 0px;
+    left: 0px;
+    font-size: 1.5em;
+
+}
+
+
+
+
 
 
 
@@ -309,6 +338,7 @@ a{
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    width:100%;
 }
 
 .menu-card-price{
@@ -328,15 +358,23 @@ a{
     align-items: center;
     border-radius: 0 20px 20px 0;
     transition: 0.5s;
-    transform: scaleX(0);
-    transform: rotateY('-90');
+    transform: translateX(90px);
+    i{
+        transform: rotate(-90deg);
+    }
+    
 }
 
 .menu-card:hover .menu-card-check{
-    width: 50px;
-    transform:rotateY('90');
-    transform: scaleX(1);
+    width: 100px;
+
+    transform: translateX(0) ;
     transition-duration: 0.5s;
+    i{
+        transform:rotate(0) ;
+        transition-delay: 1s;
+        transition: transform 1000ms ease-in-out;
+    }
 }
 
 .command a{
