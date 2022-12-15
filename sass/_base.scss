@@ -13,17 +13,18 @@ body {
     margin-inline: 0;
 }
 
-/* à retravailler
-.spinlaoder{
+/*
+.spinloader{
     display: flex;
+    position: fixed;
     text-align: center;
     align-items: center;
     justify-content: center;
     background-color: white;
-    padding: 100vw;
+    padding-top: 200px;
     z-index:7;
-    height:1000px;
-    width:1000px;
+    height:100vh;
+    width:100vw;
     i{
         color: $font-primary;
         font-size: 30em;
@@ -251,7 +252,7 @@ a {
     display: block;
     position: relative;
     z-index: 1;
-    padding: 0.5em 1em;
+    padding: 1em 1em;
 
     .heart-filled {
         transform: scale(0);
@@ -285,6 +286,7 @@ a {
             transition-delay: 0.5s;
         }
     }
+    
 }
 
 .fa-heart {
@@ -353,7 +355,6 @@ a {
 
 .menu-card-info {
     justify-content: space-around;
-    opacity: inherit;
     padding: 0.7em;
     transition: 0.5s;
     overflow: hidden;
@@ -361,8 +362,8 @@ a {
     text-overflow: ellipsis;
     width: 100%;
     transform: scaleY(1);
-    opacity: 1;
     transition-duration: 1.5s;
+    transition-delay: 2s;
 }
 
 .menu-card-price {
@@ -385,7 +386,7 @@ a {
 
 /* Tablette */
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 700px) {
     .intro{
         flex-direction: row;
     }
@@ -395,6 +396,13 @@ a {
         flex-wrap: wrap;
         .card{
             width:30%;
+            img{
+                height: 20vw;
+            }
+            .new-tag{
+                top:1em;
+                right:1em;
+            }
         }
     }
 }

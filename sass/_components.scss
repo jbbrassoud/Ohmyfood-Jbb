@@ -6,7 +6,7 @@
     background: linear-gradient(rgb(202, 129, 212), rgb(148, 102, 212));
 
     &:hover {
-        background: darken(#CA81D4, 10%);
+        background: lighten(#CA81D4, 10%);
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
     }
 }
@@ -37,7 +37,7 @@
 
 }
 
-.menu-card:hover .menu-card-check {
+.menu-card:active, .menu-card:hover .menu-card-check {
     width: 100px;
     opacity: 1;
     transform: translateX(0);
