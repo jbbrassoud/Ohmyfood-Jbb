@@ -171,7 +171,6 @@ header img {
             border-radius: 25px;
         }
 
-
         i {
             font-size: 20px;
             width: 30px;
@@ -186,8 +185,6 @@ header img {
                 color: rgb(136, 95, 211);
             }
         }
-
-
     }
 }
 
@@ -305,6 +302,7 @@ a {
 
 .beforemenu {
     min-height: 120px;
+    max-height: 320px;
     overflow: hidden;
     object-fit: cover;
 
@@ -360,13 +358,15 @@ a {
 .menu-card-info {
     justify-content: space-around;
     opacity: inherit;
-    transition-duration: 1.5s;
     padding: 0.7em;
     transition: 0.5s;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     width: 100%;
+    transform: scaleY(1);
+    opacity: 1;
+    transition-duration: 1.5s;
 }
 
 .menu-card-price {
@@ -384,17 +384,19 @@ a {
     align-items: center;
     border-radius: 0 20px 20px 0;
     transition: 0.5s;
-    transform: translateX(90px);
+    transform-origin: right;
+    transform: translateX(10px);
+    opacity: 0;
 
     i {
-        transform: rotate(-90deg);
+        transform: rotate(-270deg);
     }
 
 }
 
 .menu-card:hover .menu-card-check {
     width: 100px;
-
+    opacity: 1;
     transform: translateX(0);
     transition-duration: 0.5s;
 
