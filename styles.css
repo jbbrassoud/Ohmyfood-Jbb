@@ -1,3 +1,4 @@
+/* MOBILE >FIRST */
 body {
   width: 100vw;
   display: flex;
@@ -25,6 +26,10 @@ body {
 
 .center {
   align-items: center;
+}
+
+.shadow {
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
@@ -77,16 +82,12 @@ header {
   padding-top: 80px;
 }
 
-.shadow {
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
-}
-
 .place {
   width: 100vw;
   justify-content: center;
   padding-bottom: 15px;
 }
-.place background-color:rgb(234,234,234) i {
+.place background-color:rgb(234, 234, 234) i {
   margin-right: 15px;
 }
 
@@ -108,7 +109,12 @@ header img {
   margin: 20px;
   padding: 15px;
   border-radius: 30px;
-  background: linear-gradient(175deg, rgb(202, 129, 212) 20px, rgb(148, 102, 212));
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(rgb(202, 129, 212), rgb(148, 102, 212));
+}
+.descro a:hover {
+  background: #ba5bc7;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
 }
 
 .descro p {
@@ -201,7 +207,8 @@ a {
 }
 
 .card-infos {
-  width: 100%;
+  width: auto;
+  flex: 2;
 }
 
 .new-tag {
@@ -246,7 +253,7 @@ a {
   color: black;
   opacity: 1;
   transform-origin: bottom;
-  transition-delay: 0.5s;
+  transition-delay: 0;
 }
 .heart:hover .heart-filled {
   opacity: 1;
@@ -254,6 +261,7 @@ a {
 }
 .heart:hover .heart-empty {
   opacity: 0;
+  transition-delay: 0.5s;
 }
 
 .fa-heart {
@@ -385,4 +393,6 @@ footer {
 
 footer i {
   width: 25px;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/* Tablette *//*# sourceMappingURL=styles.css.map */
