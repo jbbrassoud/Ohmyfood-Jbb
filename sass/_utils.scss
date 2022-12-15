@@ -1,0 +1,12 @@
+/* UTILS - vous rangez vos variables, fonctions, mixins et 
+les  %placeholders pour les extensions (si vous en utilisez) */
+
+$font-primary: rgb(61, 61, 61);
+
+$font-second: rgb(126, 126, 126);
+
+$check-color: #99E2D0;
+
+@mixin shadow {
+    box-shadow: 0 2px 15px rgb(0, 0, 0, 0.2);
+}

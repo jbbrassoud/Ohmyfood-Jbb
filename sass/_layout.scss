@@ -1,0 +1,24 @@
+/* Layouts - est le dossier où vous mettez vos blocs BEM qui contiennent ce qui est réutilisable, 
+par exemple un header pour les mises en page de grande taille ou un footer ; */
+header {
+    width: 100vw;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0 5px 0;
+    z-index: 4;
+    background-color: white;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 1em;
+}
+
+footer {
+    padding: 15px;
+    color: white;
+    background-color: rgb(53, 53, 53)
+}
+
+footer i {
+    width: 25px;
+}

@@ -1,0 +1,51 @@
+/* Components - est utilisé pour ranger les blocs BEM qui sont plus indépendants, comme les boutons. */
+
+/* Boutons CTA */
+@mixin buttons {
+    @include shadow;
+    background: linear-gradient(rgb(202, 129, 212), rgb(148, 102, 212));
+
+    &:hover {
+        background: darken(#CA81D4, 10%);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    }
+}
+
+
+/* check vert */
+.fa-circle-check {
+    color: white;
+    font-size: 20px;
+    transition-duration: 0.5s;
+}
+
+.menu-card-check {
+    display: flex;
+    width: 0;
+    background-color: #99E2D0;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 20px 20px 0;
+    transition: 0.5s;
+    transform-origin: right;
+    transform: translateX(10px);
+    opacity: 0;
+
+    i {
+        transform: rotate(-270deg);
+    }
+
+}
+
+.menu-card:hover .menu-card-check {
+    width: 100px;
+    opacity: 1;
+    transform: translateX(0);
+    transition-duration: 0.5s;
+
+    i {
+        transform: rotate(0);
+        transition-delay: 1s;
+        transition: transform 1000ms ease-in-out;
+    }
+}

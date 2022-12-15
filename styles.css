@@ -1,4 +1,71 @@
-/* MOBILE >FIRST */
+@charset "UTF-8";
+/* MOBILE >FIRST */ /* Components - est utilisé pour ranger les blocs BEM qui sont plus indépendants, comme les boutons. */
+/* Boutons CTA */
+/* check vert */
+.fa-circle-check {
+  color: white;
+  font-size: 20px;
+  transition-duration: 0.5s;
+}
+
+.menu-card-check {
+  display: flex;
+  width: 0;
+  background-color: #99E2D0;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 20px 20px 0;
+  transition: 0.5s;
+  transform-origin: right;
+  transform: translateX(10px);
+  opacity: 0;
+}
+.menu-card-check i {
+  transform: rotate(-270deg);
+}
+
+.menu-card:hover .menu-card-check {
+  width: 100px;
+  opacity: 1;
+  transform: translateX(0);
+  transition-duration: 0.5s;
+}
+.menu-card:hover .menu-card-check i {
+  transform: rotate(0);
+  transition-delay: 1s;
+  transition: transform 1000ms ease-in-out;
+}
+
+/* Layouts - est le dossier où vous mettez vos blocs BEM qui contiennent ce qui est réutilisable, 
+par exemple un header pour les mises en page de grande taille ou un footer ; */
+header {
+  width: 100vw;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0 5px 0;
+  z-index: 4;
+  background-color: white;
+  overflow: hidden;
+  font-size: 20px;
+  padding: 1em;
+}
+
+footer {
+  padding: 15px;
+  color: white;
+  background-color: rgb(53, 53, 53);
+}
+
+footer i {
+  width: 25px;
+}
+
+/* UTILS - vous rangez vos variables, fonctions, mixins et 
+les  %placeholders pour les extensions (si vous en utilisez) */
+/* BASE - contient les fichiers qui définissent les fondations de votre site, 
+par exemple la police de caractères et les normes que vous voulez appliquer 
+sur tout votre site, telles que le box-sizing ;*/
 body {
   width: 100vw;
   display: flex;
@@ -10,6 +77,23 @@ body {
   margin-inline: 0;
 }
 
+/* à retravailler
+.spinlaoder{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 100vw;
+    z-index:7;
+    height:1000px;
+    width:1000px;
+    i{
+        color: $font-primary;
+        font-size: 30em;
+    }
+}
+*/
 ::-webkit-scrollbar {
   display: none;
 }
@@ -65,19 +149,6 @@ p {
   color: rgb(61, 61, 61);
 }
 
-header {
-  width: 100vw;
-  position: fixed;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 0 5px 0;
-  z-index: 5;
-  background-color: white;
-  overflow: hidden;
-  font-size: 20px;
-  padding: 1em;
-}
-
 .afterheader {
   padding-top: 80px;
 }
@@ -94,6 +165,11 @@ header {
 header img {
   height: 25px;
   margin: auto;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
 }
 
 .descro {
@@ -174,6 +250,10 @@ a {
   justify-content: space-around;
   padding: 25px;
   background-color: rgb(245, 245, 245);
+}
+.rest-list .restos {
+  display: flex;
+  flex-direction: column;
 }
 .rest-list a {
   border-radius: 15px;
@@ -345,60 +425,29 @@ a {
   justify-content: end;
 }
 
-.menu-card-check {
-  display: flex;
-  width: 0;
-  background-color: #99E2D0;
-  justify-content: center;
-  align-items: center;
-  border-radius: 0 20px 20px 0;
-  transition: 0.5s;
-  transform-origin: right;
-  transform: translateX(10px);
-  opacity: 0;
-}
-.menu-card-check i {
-  transform: rotate(-270deg);
-}
-
-.menu-card:hover .menu-card-check {
-  width: 100px;
-  opacity: 1;
-  transform: translateX(0);
-  transition-duration: 0.5s;
-}
-.menu-card:hover .menu-card-check i {
-  transform: rotate(0);
-  transition-delay: 1s;
-  transition: transform 1000ms ease-in-out;
-}
-
 .command a {
   color: white;
   margin: 30px auto;
   padding: 15px 25px;
   border-radius: 30px;
-  background: linear-gradient(175deg, rgb(202, 129, 212) 20px, rgb(148, 102, 212));
-  transition-duration: 0.5s;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(rgb(202, 129, 212), rgb(148, 102, 212));
 }
 .command a:hover {
-  padding: 20px 30px;
+  background: #ba5bc7;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
 }
 
-.fa-circle-check {
-  color: white;
-  font-size: 20px;
-  transition-duration: 0.5s;
-}
-
-footer {
-  padding: 15px;
-  color: white;
-  background-color: rgb(53, 53, 53);
-}
-
-footer i {
-  width: 25px;
-}
-
-/* Tablette *//*# sourceMappingURL=styles.css.map */
+/* Tablette */
+@media screen and (min-width: 750px) {
+  .intro {
+    flex-direction: row;
+  }
+  .restos {
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+  }
+  .restos .card {
+    width: 30%;
+  }
+}/*# sourceMappingURL=styles.css.map */
