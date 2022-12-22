@@ -122,6 +122,36 @@ body {
   transition-delay: 0.5s;
 }
 
+.menu-card {
+  width: 100%;
+  opacity: 1;
+  justify-content: space-between;
+  background-color: white;
+  margin: 2vw 0;
+  border-radius: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition-duration: 2s;
+}
+.menu-card p {
+  font-weight: 300;
+}
+.menu-card .menu-card-info {
+  justify-content: space-around;
+  padding: 0.7em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  transition-duration: 1s;
+}
+.menu-card .menu-card-price {
+  font-size: 1em;
+  padding: 15px 20px;
+  font-weight: 600;
+  justify-content: end;
+}
+
 /* Layouts - est le dossier où vous mettez vos blocs BEM qui contiennent ce qui est réutilisable, 
 par exemple un header pour les mises en page de grande taille ou un footer ; */
 header {
@@ -459,7 +489,10 @@ a {
   text-overflow: ellipsis;
   white-space: nowrap;
   width: 100%;
-  transition-duration: 1s;
+  transition-duration: 2s;
+}
+.menu .menu-card .menu-card-info * {
+  transition-duration: 2s;
 }
 .menu .menu-card .menu-card-price {
   font-size: 1em;
@@ -534,6 +567,10 @@ a {
   .resto {
     padding: 30px;
     border-radius: 40px;
+  }
+  .resto .title {
+    margin: auto;
+    font-size: 1.5em;
   }
   .menu {
     flex-direction: row;

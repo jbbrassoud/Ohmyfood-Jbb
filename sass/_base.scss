@@ -311,7 +311,10 @@ a {
             text-overflow: ellipsis;
             white-space: nowrap;
             width: 100%;
-            transition-duration: 1s;
+            transition-duration: 2s;
+            *{
+                transition-duration: 2s;
+            }
         }
         .menu-card-price {
             font-size:1em;
@@ -400,6 +403,10 @@ a {
     .resto{
         padding: 30px;
         border-radius: 40px;
+        .title{
+            margin: auto;
+            font-size:1.5em;
+        }
     }
     .menu{
        flex-direction: row; 
