@@ -1,4 +1,16 @@
 /* MOBILE >FIRST */
+body {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+    margin-block: 0;
+    margin-inline: 0;
+    opacity: 1;
+}
+
 @import "./sass/_components.scss";
 
 @import "./sass/_layout.scss";
