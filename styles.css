@@ -445,9 +445,9 @@ a {
   background-color: white;
   margin: 2vw 0;
   border-radius: 20px;
-  text-overflow: ellipsis;
   overflow: hidden;
-  transition-duration: 3s;
+  text-overflow: ellipsis;
+  transition-duration: 2s;
 }
 .menu .menu-card p {
   font-weight: 300;
@@ -456,15 +456,14 @@ a {
   justify-content: space-around;
   padding: 0.7em;
   overflow: hidden;
-  white-space: nowrap;
   text-overflow: ellipsis;
+  white-space: nowrap;
   width: 100%;
-  transform: scale(1);
-  opacity: 1;
-  transition: transform 1s, opacity 2s;
+  transition-duration: 1s;
 }
 .menu .menu-card .menu-card-price {
-  padding: 3vw 5vw;
+  font-size: 1em;
+  padding: 15px 20px;
   font-weight: 600;
   justify-content: end;
 }
