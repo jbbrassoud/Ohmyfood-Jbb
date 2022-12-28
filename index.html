@@ -1,9 +1,8 @@
 <!DOCTYPE html>
+<html lang="fr">
 
 <head>
-    <meta charset="utf-8" lang="fr" title="Reservez le menu qui vous convient">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/3b52b63a1b.js" crossorigin="anonymous"></script>
+    <title>Ohmyfood</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,23 +10,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Shrikhand&display=swap"
         rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3b52b63a1b.js" crossorigin="anonymous"></script>
+    <meta charset="utf-8" lang="fr" title="Reservez le menu qui vous convient">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
     <header class="row shadow">
-        <img src="images/logo/ohmyfood@2x.svg" />
+        <img src="images/logo/ohmyfood@2x.svg" alt="Logo de Ohmyfood">
     </header>
     <div class="spinloader">
-        <img src="images/oval.svg" />
-        <i class="fa-solid fa-spinner"></i>
+        <img src="images/oval.svg" alt="loader">
     </div>
-    <span class="row afterheader place dark-grey">
+    <div class="row afterheader place dark-grey">
         <i class="fa-sharp fa-solid fa-location-dot"></i>
         <p>Paris, Belleville</p>
-        <form class="headersearch">
-            <input type="search" placeholder="Rechercher">
-        </form>
-    </span>
+    </div>
     <section class="intro">
         <div class="column descro">
             <h1>Réservez le menu qui vous convient</h1>
@@ -40,7 +38,6 @@
                 <a><span>1</span><i class="fa-solid fa-mobile-screen-button grey"></i>Choisissez un restaurant</a>
                 <a><span>2</span><i class="fa-solid fa-list grey"></i>Composez votre menu</a>
                 <a class><span>3</span><i class="fa-solid fa-store grey"></i>Dégustez au restaurant</a>
-                </ol>
             </div>
         </div>
     </section>
@@ -52,75 +49,22 @@
                 <a href="lapalettedugout.html" class="column">
                     <span class="card-top">
                         <img src="images/restaurants/la_palette_du_gout.jpg"
-                            alt="assiette gastronomique dans un bistro" />
+                            alt="assiette gastronomique dans un bistro">
                     </span>
+                </a>
                     <div class="row center card-low">
-                        <div class="column card-infos">
+                        <a class="column card-infos" href="">
                             <h3>La palette du goût</h3>
                             <p>Ménilmontant</p>
-                        </div>
-                </a>
-                <span class="heart">
-                    <i class="fa-regular fa-heart heart-empty"></i>
-                    <i class="fa-solid fa-heart heart-filled"></i>
-                </span>
+                        </a>
+                        <button class="heart">
+                            <i class="fa-regular fa-heart heart-empty"></i>
+                            <i class="fa-solid fa-heart heart-filled"></i>
+                        </button>
                     </div>
-            </div>
-        <div class="card shadow">
-            <span class="new-tag">Nouveau</span>
-            <a href="lanotenchantee.html" class="column">
-                <span class="card-top">
-                    <img src="images/restaurants/la_note_enchantee.jpg" alt="assiette gastronomique dans un bistro" />
-                </span>
-                <div class="row center card-low">
-                    <div class="column card-infos">
-                        <h3>La note enchantée</h3>
-                        <p>Charonne</p>
-                    </div>
-            </a>
-            <span class="heart">
-                <i class="fa-regular fa-heart heart-empty"></i>
-                <i class="fa-solid fa-heart heart-filled"></i>
-            </span>
-                </div>
-        </div>
-        <div class="card shadow">
-            <a href="alafrancaise.html" class="column">
-                <span class="card-top">
 
-                    <img src="images/restaurants/a_la_francaise.jpg" alt="assiette gastronomique dans un bistro" />
-                </span>
-                <div class="row center card-low">
-                    <div class="column card-infos">
-                        <h3>A la française</h3>
-                        <p>Cité Rouge</p>
-                    </div>
-            </a>
-            <div class="heart">
-                <i class="fa-regular fa-heart heart-empty"></i>
-                <i class="fa-solid fa-heart heart-filled"></i>
             </div>
-        </div>
-        </div>
-        <div class="card shadow">
-            <a href="ledeleicedessens.html" class="column">
-                <span class="card-top">
-
-                    <img src="images/restaurants/le_delice_des_sens.jpg" alt="assiette gastronomique dans un bistro" />
-                </span>
-                <div class="row center card-low">
-                    <div class="column card-infos">
-                        <h3>Le délice des sens</h3>
-                        <p>Folie-Méricourt</p>
-                    </div>
-            </a>
-            <div class="heart">
-                <i class="fa-regular fa-heart heart-empty"></i>
-                <i class="fa-solid fa-heart heart-filled"></i>
-            </div>
-        </div>
-        </div>
-    </div>
+        </div>  
     </section>
     <footer class="column">
         <h4>ohmyfood</h4>

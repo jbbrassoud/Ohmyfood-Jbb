@@ -292,14 +292,14 @@ a {
 
     .menu-card {
         width: 100%;
-        opacity: 1;
         justify-content: space-between;
         background-color: white;
         margin: 2vw 0;
         border-radius: 20px;
         overflow: hidden;
         text-overflow: ellipsis;
-        transition-duration: 2s;
+        white-space: nowrap;
+        animation: fadein 2s ease-in 0s 1 normal forwards running;
         p {
             font-weight: 300;
         }
@@ -311,10 +311,7 @@ a {
             text-overflow: ellipsis;
             white-space: nowrap;
             width: 100%;
-            transition-duration: 2s;
-            *{
-                transition-duration: 2s;
-            }
+            animation: fadein 2s ease-in 0s 1 normal forwards running;
         }
         .menu-card-price {
             font-size:1em;

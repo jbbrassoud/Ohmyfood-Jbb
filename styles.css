@@ -9,7 +9,6 @@ body {
   background-color: white;
   margin-block: 0;
   margin-inline: 0;
-  opacity: 1;
 }
 
 /* Components - est utilisé pour ranger les blocs BEM qui sont plus indépendants, comme les boutons. */
@@ -23,11 +22,9 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 7;
-  transform: scaleZ(0);
-  opacity: 0;
-  transition: transform 3s, opacity 5s;
-  -webkit-animation-timing-function: ease-in;
-          animation-timing-function: ease-in;
+  opacity: 1;
+  -webkit-animation: fadeout 1s ease-in 0s 1 normal forwards running;
+          animation: fadeout 1s ease-in 0s 1 normal forwards running;
 }
 .spinloader img {
   position: relative;
@@ -38,9 +35,6 @@ body {
   z-index: 9;
   margin: auto;
   transform: rotate(250deg);
-  transition-duration: 5s;
-  -webkit-animation-timing-function: ease-in;
-          animation-timing-function: ease-in;
 }
 
 /* Boutons CTA */
@@ -80,10 +74,15 @@ body {
 }
 
 .heart {
-  display: block;
+  display: flex;
   position: relative;
-  z-index: 1;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
   padding: 1em 1em;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  font-size: 1.1em;
 }
 .heart .heart-filled {
   transform: scale(0);
@@ -92,8 +91,7 @@ body {
           background-clip: text;
   -webkit-text-fill-color: transparent;
   transition-duration: 1s;
-  font-size: 1.5em;
-  z-index: 1;
+  z-index: 3;
   transform-origin: bottom;
 }
 .heart .heart-empty {
@@ -105,14 +103,6 @@ body {
   transform-origin: bottom;
   transition-delay: 0;
 }
-.heart:hover .heart-filled {
-  opacity: 1;
-  transform: scale(1);
-}
-.heart:hover .heart-empty {
-  opacity: 0;
-  transition-delay: 0.5s;
-}
 .heart:focus .heart-filled {
   opacity: 1;
   transform: scale(1);
@@ -122,36 +112,47 @@ body {
   transition-delay: 0.5s;
 }
 
-.menu-card {
-  width: 100%;
-  opacity: 1;
-  justify-content: space-between;
-  background-color: white;
-  margin: 2vw 0;
-  border-radius: 20px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  transition-duration: 2s;
-}
-.menu-card p {
-  font-weight: 300;
-}
-.menu-card .menu-card-info {
-  justify-content: space-around;
-  padding: 0.7em;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  width: 100%;
-  transition-duration: 1s;
-}
-.menu-card .menu-card-price {
-  font-size: 1em;
-  padding: 15px 20px;
-  font-weight: 600;
-  justify-content: end;
+@-webkit-keyframes fadeout {
+  from {
+    opacity: 1;
+    transform: scaleZ(1);
+  }
+  to {
+    opacity: 0;
+    transform: scaleZ(0);
+  }
 }
 
+@keyframes fadeout {
+  from {
+    opacity: 1;
+    transform: scaleZ(1);
+  }
+  to {
+    opacity: 0;
+    transform: scaleZ(0);
+  }
+}
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+    transform: scaleZ(0);
+  }
+  to {
+    opacity: 1;
+    transform: scaleZ(1);
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: scaleZ(0);
+  }
+  to {
+    opacity: 1;
+    transform: scaleZ(1);
+  }
+}
 /* Layouts - est le dossier où vous mettez vos blocs BEM qui contiennent ce qui est réutilisable, 
 par exemple un header pour les mises en page de grande taille ou un footer ; */
 header {
@@ -296,6 +297,8 @@ header img {
 .descro a:hover {
   background: #daa7e1;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
 }
 
 .descro p {
@@ -470,14 +473,15 @@ a {
 }
 .menu .menu-card {
   width: 100%;
-  opacity: 1;
   justify-content: space-between;
   background-color: white;
   margin: 2vw 0;
   border-radius: 20px;
   overflow: hidden;
   text-overflow: ellipsis;
-  transition-duration: 2s;
+  white-space: nowrap;
+  -webkit-animation: fadein 2s ease-in 0s 1 normal forwards running;
+          animation: fadein 2s ease-in 0s 1 normal forwards running;
 }
 .menu .menu-card p {
   font-weight: 300;
@@ -489,10 +493,8 @@ a {
   text-overflow: ellipsis;
   white-space: nowrap;
   width: 100%;
-  transition-duration: 2s;
-}
-.menu .menu-card .menu-card-info * {
-  transition-duration: 2s;
+  -webkit-animation: fadein 2s ease-in 0s 1 normal forwards running;
+          animation: fadein 2s ease-in 0s 1 normal forwards running;
 }
 .menu .menu-card .menu-card-price {
   font-size: 1em;
@@ -512,6 +514,8 @@ a {
 .command a:hover {
   background: #daa7e1;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
 }
 
 /* Tablette */
