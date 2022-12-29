@@ -295,10 +295,8 @@ header img {
   background: linear-gradient(rgb(202, 129, 212), rgb(148, 102, 212));
 }
 .descro a:hover {
-  background: #daa7e1;
+  background: #e2bae7;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
 }
 
 .descro p {
@@ -512,10 +510,8 @@ a {
   background: linear-gradient(rgb(202, 129, 212), rgb(148, 102, 212));
 }
 .command a:hover {
-  background: #daa7e1;
+  background: #e2bae7;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
 }
 
 /* Tablette */

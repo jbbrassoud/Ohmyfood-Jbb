@@ -34,9 +34,8 @@
     background: linear-gradient(rgb(202, 129, 212), rgb(148, 102, 212));
 
     &:hover {
-        background: lighten(#CA81D4, 10%);
+        background: lighten(#CA81D4, 15%);
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
-        animation-duration: 2s;
     }
 }
 
