@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+<html lang="fr">
 <head>
+    <title>La Palette du goût - Ohmyfood</title>
     <meta charset="utf-8" lang="fr" title="Reservez le menu qui vous convient">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/3b52b63a1b.js" crossorigin="anonymous"></script>
@@ -13,86 +15,88 @@
 <body>
     <header class="row">
         <a href="index.html"><i class="fa-solid fa-arrow-left"></i></a>
-        <img src="images/logo/ohmyfood@2x.svg"/>
+        <img src="images/logo/ohmyfood@2x.svg" alt="logo Ohmyfood">
     </header>
     <div class="beforemenu">
-        <img src="images/restaurants/le_delice_des_sens.jpg"/>
+        <img src="images/restaurants/le_delice_des_sens.jpg" alt="Belle assiette gastronomique">
     </div>
     <div class="column resto">
-        <span class="row center title">
-            <h1>La palette du goût</h1>
-            <span class="heart">
+        <div class="row center title">
+            <h1>Le délice des sens</h1>
+            <button class="heart">
                 <i class="fa-regular fa-heart heart-empty"></i>
                 <i class="fa-solid fa-heart heart-filled"></i>
-            </span>
-            </i>
-        </span>
-        <section class="menu">
-            <div class="menu-tab">
+            </button>
+        </div>
+        <div class="menu">
+            <section class="menu-tab">
+                <!--Entrees-->
                 <h2>Entrées</h2>
-                <span class="row shadow menu-card mc1">
-                    <span class="column menu-card-info">
-                        <h3>Fricassée d'escargot</h3>
-                        <p>Au piment d'Espelette</p>
-                    </span>
+                <div class="row shadow menu-card mc1">
+                    <div class="column menu-card-info">
+                        <h3>Tartare de thon</h3>
+                        <p>Assaisonné au yuzu</p>
+                    </div>
                     <span class="column menu-card-price">25€</span>
                     <span class="menu-card-check"><i class="fa-sharp fa-solid fa-circle-check"></i></span>
-                </span>
+                </div>
                 <div class="row menu-card shadow mc2">
                     <div class="column menu-card-info">
-                        <h3>Foie gras de canard mi-cuit</h3>
-                        <p>Et ses copeaux de truffe noire</p>
+                        <h3>Bouchée de homard croustillant</h3>
+                        <p>Et sa farandole de petits légumes</p>
                     </div>
                     <span class="column menu-card-price">35€</span>
                     <span class="menu-card-check"><i class="fa-sharp fa-solid fa-circle-check"></i></span>
                 </div>
-                <div class="row menu-card shadow">
+                <div class="row menu-card shadow mc3">
                     <div class="column menu-card-info">
-                        <h3>Œuf au plat</h3>
-                        <p>Assaisonné à la truffe sur lit de caviar</p>
+                        <h3>Velouté de cèpes</h3>
+                        <p>Aux truffes</p>
                     </div>
                     <span class="column menu-card-price">20€</span>
                     <span class="menu-card-check"><i class="fa-sharp fa-solid fa-circle-check"></i></span>
                 </div>
-            </div>
-            <div class="menu-tab">
+            </section>
+            <section class="menu-tab">
+                <!--Plats-->
                 <h2>Plats</h2>
-                <div class="row menu-card shadow">
+                <div class="row menu-card shadow mc1">
                     <div class="column menu-card-info">
-                        <h3>Filet de boeuf aux herbes</h3>
-                        <p>Accompagné de sa ribambelle de légumes</p>
+                        <h3>Poulet rôti aux herbes de Provence</h3>
+                        <p>Et sa crème de truffe</p>
                     </div>
                     <span class="column menu-card-price">40€</span>
                     <span class="menu-card-check"><i class="fa-sharp fa-solid fa-circle-check"></i></span>
                 </div>
-                <div class="row menu-card shadow">
+                <div class="row menu-card shadow mc2">
                     <div class="column menu-card-info">
-                        <h3>Parmentier de queue de boeuf</h3>
-                        <p>À la truffe noire sur sa purée de panais</p>
+                        <h3>Langouste rôtie</h3>
+                        <p>Et ses légumes de saison</p>
                     </div>
                     <span class=" column menu-card-price">35€</span>
                     <span class="menu-card-check"><i class="fa-sharp fa-solid fa-circle-check"></i></span>
                 </div>
-                <div class="row menu-card shadow">
+                <div class="row menu-card shadow mc3">
                     <div class="column menu-card-info">
-                        <h3>Filet de turbot</h3>
-                        <p>Aux agrumes</p>
+                        <h3>Côte de boeuf Angus </h3>
+                        <p>Et sa purée de panais</p>
                     </div>
                     <span class="column menu-card-price">44€</span>
                     <span class="menu-card-check"><i class="fa-sharp fa-solid fa-circle-check"></i></span>
                 </div>
-            </div>
-            <div class="menu-tab">
+            </section>
+            <section class="menu-tab">
+                <!--Desserts-->
                 <h2>Desserts</h2>
-                <div class="row menu-card shadow">
+                <div class="row menu-card shadow mc1">
                     <div class="column menu-card-info">
-                        <h3>Paris-Brest</h3>
-                        <p>Accompagné de sa ribambelle de légumes</p>
+                        <h3>Farandole de desserts</h3>
+                        <p>Du chef</p>
                     </div>
                     <span class="column menu-card-price">18€</span>
                     <span class="menu-card-check"><i class="fa-sharp fa-solid fa-circle-check"></i></span>
                 </div>
-                <div class="row menu-card shadow">
+                <div class="row menu-card shadow mc2">
                     <div class="column menu-card-info">
                         <h3>Macaron au chocolat d'exception </h3>
                         <p>Et glace à la vanille de Madagascar</p>
@@ -100,20 +104,19 @@
                     <span class=" column menu-card-price">22€</span>
                     <span class="menu-card-check"><i class="fa-sharp fa-solid fa-circle-check"></i></span>
                 </div>
-                <div class="row menu-card shadow">
+                <div class="row menu-card shadow mc3">
                     <div class="column menu-card-info">
-                        <h3>Mousse au chocolat </h3>
-                        <p>Au piment d'Espelette et à la truffe noire</p>
+                        <h3>Tiramisu</h3>
+                        <p>À la noisette</p>
                     </div>
                     <span class="column menu-card-price">23€</span>
                     <span class="menu-card-check"><i class="fa-sharp fa-solid fa-circle-check"></i></span>
                 </div>
-            </div>
-        </section>
-        <section class="column command">
+            </section>
+        </div>
+        <div class="column command">
             <a href="#" class="shadow">Commander</a>
-        </section>
-
+        </div>
     </div>
     <footer class="column">
         <h4>ohmyfood</h4>

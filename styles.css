@@ -23,15 +23,15 @@ body {
   justify-content: center;
   z-index: 7;
   opacity: 1;
-  -webkit-animation: fadeout 1s ease-in 0s 1 normal forwards running;
-          animation: fadeout 1s ease-in 0s 1 normal forwards running;
+  -webkit-animation: fadeout 1s ease-in 1s 1 normal forwards running;
+          animation: fadeout 1s ease-in 1s 1 normal forwards running;
 }
 .spinloader img {
   position: relative;
   border-radius: 100%;
   padding: 1em;
   color: #CA81D4;
-  font-size: 12em;
+  height: 12em;
   z-index: 9;
   margin: auto;
   transform: rotate(250deg);
@@ -136,27 +136,27 @@ body {
 @-webkit-keyframes fadein {
   from {
     opacity: 0;
-    transform: scaleZ(0);
+    transform: translateY(-20px);
   }
   to {
     opacity: 1;
-    transform: scaleZ(1);
+    transform: translateY(0);
   }
 }
 @keyframes fadein {
   from {
     opacity: 0;
-    transform: scaleZ(0);
+    transform: translateY(-20px);
   }
   to {
     opacity: 1;
-    transform: scaleZ(1);
+    transform: translateY(0);
   }
 }
 /* Layouts - est le dossier où vous mettez vos blocs BEM qui contiennent ce qui est réutilisable, 
 par exemple un header pour les mises en page de grande taille ou un footer ; */
 header {
-  width: 100vw;
+  width: 90vw;
   position: fixed;
   justify-content: center;
   align-items: center;
@@ -165,7 +165,11 @@ header {
   background-color: white;
   overflow: hidden;
   font-size: 20px;
-  padding: 1em;
+  padding: 5%;
+}
+header img {
+  height: 25px;
+  margin: auto;
 }
 
 footer {
@@ -268,11 +272,6 @@ p {
   color: rgb(61, 61, 61);
 }
 
-header img {
-  height: 25px;
-  margin: auto;
-}
-
 .intro {
   display: flex;
   flex-direction: column;
@@ -285,7 +284,6 @@ header img {
   text-align: center;
   background-color: rgb(247, 247, 247);
 }
-
 .descro a {
   color: white;
   margin: 20px;
@@ -294,11 +292,13 @@ header img {
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
   background: linear-gradient(rgb(202, 129, 212), rgb(148, 102, 212));
 }
+.descro ahover {
+  box-shadow: 0 3px 18px rgba(0, 0, 0, 0.3);
+}
 .descro a:hover {
   background: #e2bae7;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
 }
-
 .descro p {
   font-size: 18px;
   font-weight: 300;
@@ -379,11 +379,17 @@ a {
   margin: 20px 0;
 }
 .card img {
-  height: 40vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 45vw;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   overflow: hidden;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .card-top {
@@ -441,20 +447,20 @@ a {
 }
 
 .resto {
+  width: auto;
   margin: -30px 0 0 0;
   padding: 30px 10px 20px 10px;
   border-radius: 30px;
   background-color: rgb(247, 247, 247);
   transition-duration: 0.5s;
 }
+.resto .title {
+  justify-content: space-between;
+}
 .resto .title h1 {
   font-size: 1.5em;
   font-family: "Shrikhand";
   font-weight: 300;
-  margin-right: 1.5em;
-}
-.resto .title span {
-  margin-left: 30px;
 }
 
 .menu {
@@ -475,11 +481,7 @@ a {
   background-color: white;
   margin: 2vw 0;
   border-radius: 20px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  -webkit-animation: fadein 2s ease-in 0s 1 normal forwards running;
-          animation: fadein 2s ease-in 0s 1 normal forwards running;
+  opacity: 0;
 }
 .menu .menu-card p {
   font-weight: 300;
@@ -491,14 +493,32 @@ a {
   text-overflow: ellipsis;
   white-space: nowrap;
   width: 100%;
-  -webkit-animation: fadein 2s ease-in 0s 1 normal forwards running;
-          animation: fadein 2s ease-in 0s 1 normal forwards running;
+}
+.menu .menu-card .menu-card-info h3, .menu .menu-card .menu-card-info p {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu .menu-card .menu-card-price {
   font-size: 1em;
-  padding: 15px 20px;
+  padding: 15px 20px 15px 5px;
   font-weight: 600;
   justify-content: end;
+}
+.menu .mc1 {
+  -webkit-animation: fadein 1s ease-in 0s 1 normal forwards running;
+          animation: fadein 1s ease-in 0s 1 normal forwards running;
+}
+.menu .mc2 {
+  -webkit-animation: fadein 1s ease-in 0.2s 1 normal forwards running;
+          animation: fadein 1s ease-in 0.2s 1 normal forwards running;
+}
+.menu .mc3 {
+  -webkit-animation: fadein 1s ease-in 0.4s 1 normal forwards running;
+          animation: fadein 1s ease-in 0.4s 1 normal forwards running;
+}
+.menu .mc4 {
+  -webkit-animation: fadein 1s ease-in 0.6s 1 normal forwards running;
+          animation: fadein 1s ease-in 0.6s 1 normal forwards running;
 }
 
 .command a {
@@ -508,6 +528,9 @@ a {
   border-radius: 30px;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
   background: linear-gradient(rgb(202, 129, 212), rgb(148, 102, 212));
+}
+.command ahover {
+  box-shadow: 0 3px 18px rgba(0, 0, 0, 0.3);
 }
 .command a:hover {
   background: #e2bae7;
@@ -559,10 +582,12 @@ a {
   }
   .rest-list .restos .card {
     width: 23%;
-    height: 25vw;
-  }
-  .rest-list .restos .card .img {
     height: 20vw;
+    justify-content: end;
+    align-items: flex-end;
+  }
+  .rest-list .restos .card img {
+    height: 15vw;
   }
   .resto {
     padding: 30px;

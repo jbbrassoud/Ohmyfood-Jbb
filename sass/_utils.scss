@@ -9,4 +9,7 @@ $check-color: #99E2D0;
 
 @mixin shadow {
     box-shadow: 0 2px 15px rgb(0, 0, 0, 0.2);
+    &hover{
+        box-shadow: 0 3px 18px rgb(0, 0, 0, 0.3);
+    }
 }
