@@ -101,7 +101,6 @@ body {
   color: black;
   opacity: 1;
   transform-origin: bottom;
-  transition-delay: 0;
 }
 .heart:focus .heart-filled {
   opacity: 1;
