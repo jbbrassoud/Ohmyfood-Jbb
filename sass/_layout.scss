@@ -20,9 +20,14 @@ header {
 footer {
     padding: 15px;
     color: white;
-    background-color: rgb(53, 53, 53)
+    background-color: rgb(53, 53, 53);
+    text-decoration: none;
+    text-transform: none;
+    a{
+        color: white;
+    }
+    i {
+        width: 25px;
+    }
 }
 
-footer i {
-    width: 25px;
-}

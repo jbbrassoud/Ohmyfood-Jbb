@@ -174,8 +174,12 @@ footer {
   padding: 15px;
   color: white;
   background-color: rgb(53, 53, 53);
+  text-decoration: none;
+  text-transform: none;
 }
-
+footer a {
+  color: white;
+}
 footer i {
   width: 25px;
 }
@@ -580,12 +584,12 @@ a {
   }
   .rest-list .restos .card {
     width: 23%;
-    height: 20vw;
+    height: 23vw;
     justify-content: end;
     align-items: flex-end;
   }
   .rest-list .restos .card img {
-    height: 15vw;
+    height: 16vw;
   }
   .resto {
     padding: 30px;
